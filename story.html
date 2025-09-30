@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project Story | Keynaz Jafari</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    :root{
+      --bg: #0d1117;
+      --bg-soft: #111623;
+      --card: #0f1420;
+      --text: #e6ebf5;
+      --muted: #a8b1c4;
+      --border: rgba(255,255,255,0.08);
+      --accent: #7aa2ff;
+      --accent-2: #c9e0ff;
+      --shadow: 0 10px 30px rgba(0,0,0,0.35);
+    }
+    *{ box-sizing: border-box; }
+    html, body {
+      margin:0; padding:0; background:
+        radial-gradient(1200px 800px at 10% -10%, #14203a 0%, transparent 60%),
+        radial-gradient(1000px 700px at 100% 10%, #1b2a4d 0%, transparent 55%),
+        var(--bg);
+      color: var(--text);
+      font-family: "Plus Jakarta Sans", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      line-height: 1.65;
+    }
+    a { color: var(--accent-2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .site-header {
+      position: sticky; top: 0; z-index: 20;
+      backdrop-filter: blur(10px);
+      background: linear-gradient(180deg, rgba(13,17,23,0.85), rgba(13,17,23,0.4));
+      border-bottom: 1px solid var(--border);
+    }
+    .nav.container {
+      width: min(1100px, 92%); margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 0;
+    }
+    .logo { color: #fff; font-weight: 700; letter-spacing: .3px; }
+    .logo span { color: var(--accent); }
+
+    .container { width: min(980px, 92%); margin: 0 auto; }
+    .page { padding: 28px 0 80px; }
+
+    .crumbs {
+      font-size: 14px; color: var(--muted); margin: 10px 0 8px;
+    }
+    .title {
+      font-weight: 700; font-size: clamp(28px, 4vw, 40px);
+      margin: 6px 0 2px;
+    }
+    .subtitle { color: var(--muted); margin: 0 0 16px; }
+
+    .hero-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border: 1px solid var(--border);
+      border-radius: 18px; overflow: hidden; box-shadow: var(--shadow);
+      margin: 18px 0 28px;
+    }
+
+    /* Media frame keeps a consistent 16:9 and avoids cropping (contain) */
+    .media-frame {
+      width: 100%; aspect-ratio: 16 / 9; background: var(--bg-soft);
+      display: block; position: relative;
+    }
+    .media-frame video, .media-frame img, .media-frame iframe {
+      width: 100%; height: 100%; display: block; border: 0;
+      object-fit: contain; background: var(--bg-soft);
+    }
+
+    .meta-grid {
+      display: grid; gap: 14px; margin: 22px 0 14px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .meta-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 14px; padding: 14px 16px;
+    }
+    .meta-card h4 { margin: 0 0 6px; font-size: 14px; color: var(--muted); font-weight: 600; }
+    .meta-card p, .meta-card ul { margin: 0; font-size: 14px; color: var(--text); }
+    .meta-card ul { padding-left: 16px; }
+
+    .section { margin: 28px 0; }
+    .section h3 {
+      margin: 0 0 10px; font-size: 18px; font-weight: 700;
+      letter-spacing: .2px;
+    }
+    .lead { color: var(--muted); margin-top: 6px; }
+    .bullets { padding-left: 18px; margin: 0; }
+    .bullets li { margin: 4px 0; }
+
+    .links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 14px; border-radius: 10px;
+      border: 1px solid var(--border); text-decoration: none; color: var(--text);
+      background: linear-gradient(180deg, rgba(122,162,255,0.22), rgba(122,162,255,0.06));
+    }
+    .btn:hover { box-shadow: 0 8px 22px rgba(122,162,255,0.25); transform: translateY(-1px); }
+    .btn.ghost { background: transparent; }
+    .btn i { opacity: .9; }
+
+    .gallery {
+      margin-top: 18px;
+      display: grid; gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .gallery .media-frame { aspect-ratio: 16/9; }
+
+    .footer {
+      margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--border);
+      color: var(--muted); font-size: 14px;
+      display: flex; align-items: center; gap: 8px;
+    }
+
+    @media (max-width: 640px) {
+      .links { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">Keynaz<span>.</span></a>
+      <span style="color:var(--muted); font-size:14px;">Project Story</span>
+    </nav>
+  </header>
+
+  <main class="page">
+    <div class="container">
+      <div class="crumbs"><a href="index.html">Home</a> / <span id="crumb-title">Story</span></div>
+      <h1 class="title" id="story-title">Project Title</h1>
+      <p class="subtitle" id="story-subtitle">Case study</p>
+
+      <!-- Hero media -->
+      <div class="hero-card">
+        <div class="media-frame" id="hero-media"></div>
+      </div>
+
+      <!-- Meta -->
+      <div class="meta-grid" id="meta"></div>
+
+      <!-- Sections -->
+      <section class="section" id="problem"></section>
+      <section class="section" id="process"></section>
+      <section class="section" id="outcomes"></section>
+
+      <!-- Links -->
+      <div class="links" id="links"></div>
+
+      <!-- Gallery -->
+      <div class="section" id="gallery"></div>
+
+      <div class="footer">
+        <span>&copy; 2025 Keynaz Jafari</span>
+        <span>•</span>
+        <span>Thanks for reading.</span>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Helper to build a looped muted video (no controls)
+    function videoEl(src, poster=null, className='') {
+      const v = document.createElement('video');
+      v.src = src;
+      v.autoplay = true;
+      v.muted = true;
+      v.loop = true;
+      v.playsInline = true;
+      v.preload = 'metadata';
+      if (poster) v.poster = poster;
+      if (className) v.className = className;
+      return v;
+    }
+    function imgEl(src, alt='') {
+      const img = document.createElement('img');
+      img.src = src; img.alt = alt || '';
+      return img;
+    }
+    function listEl(items) {
+      const ul = document.createElement('ul'); ul.className = 'bullets';
+      items.forEach(t => { const li = document.createElement('li'); li.textContent = t; ul.appendChild(li); });
+      return ul;
+    }
+    function metaCard(label, contentNode) {
+      const card = document.createElement('div'); card.className = 'meta-card';
+      const h4 = document.createElement('h4'); h4.textContent = label;
+      card.appendChild(h4); card.appendChild(contentNode);
+      return card;
+    }
+    function pEl(text, cls='') { const p = document.createElement('p'); if (cls) p.className = cls; p.textContent = text; return p; }
+
+    // ===== CONTENT MAP =====
+    const projects = {
+      // ---------- UI/UX ----------
+      "Flow Prototype I": {
+        subtitle: "Product Design Case Study — FIROOZEH Genetic Counselling Center",
+        hero: { type: "video", src: "assets/videos/vid1.mp4" },
+        meta: {
+          Role: ["Product Designer", "UX Researcher"],
+          "Time Frame": ["~4–6 weeks (iterative)"],
+          Domain: ["Healthcare · Genetic Counseling"],
+          Tools: ["Figma", "Trello"],
+          Focus: [
+            "End-to-end patient journey",
+            "Online & offline scheduling",
+            "Documents/consent & payments",
+            "Accessibility and privacy-by-design"
+          ]
+        },
+        problem: {
+          lead:
+            "Design a clinic platform for a genetic counseling center to manage patients, documents, online/offline appointments, and payments—while keeping the patient’s journey coherent from first contact to follow-up.",
+          bullets: [
+            "Minimize friction for first-time patients (clear intake, fees, and scheduling).",
+            "Give staff a fast, reliable calendar with overbooking safeguards and offline capture.",
+            "Handle sensitive documents and consent flows with trustworthy, consistent UI.",
+            "Support Persian/English copy and readable typography for long clinical notes."
+          ]
+        },
+        process: {
+          lead:
+            "A human-centered, iterative process: stakeholder interviews → journey mapping → low-fi wires → clinician walkthroughs → hi-fi prototype and design system tokens.",
+          bullets: [
+            "Discovery interviews with the clinician clarified key workflows: intake, triage, scheduling, payment, follow-up.",
+            "Mapped the **patient journey** (site → intake → eligibility → appointment → results) and the **staff journey** (requests → triage → docs → billing).",
+            "Low-fidelity wireframes tested early assumptions; quick cycles incorporated feedback on terminology, document upload points, and payment timing.",
+            "High-fidelity flows in Figma: appointment booking (online/offline), consent & documents, invoices/receipts, reminders, and post-visit notes.",
+            "Design system: spacing/typography tokens, component states, error/empty patterns; UA-friendly forms with inline validation and clear recovery.",
+            "Brand & color: the name **FIROOZEH**—a turquoise stone—guided the accent palette (turquoise for primary actions), with calm neutrals for clinical trust and semantic colors for status."
+          ]
+        },
+        outcomes: {
+          lead:
+            "The prototype aligned the clinic’s brand with a practical, low-training UI and is ready for engineering handoff.",
+          bullets: [
+            "Clearer intake reduced duplicate questions and re-entry in review sessions (qualitative feedback).",
+            "Staff calendar shows availability, conflicts, and offline bookings in one view—less back-and-forth.",
+            "Consent/doc uploads are integrated at the right step, reducing late-stage friction.",
+            "Payments positioned with transparent fee summary; receipt/confirmation patterns standardised.",
+            "Accessibility first: readable sizes/contrast, keyboard flow, and forgiving forms."
+          ]
+        },
+        links: {
+          figma: "https://www.figma.com/proto/Il0bOeYylAQ0CDrE13mPb8/Project?page-id=0%3A1&node-id=381-835&viewport=221%2C287%2C0.38&t=TeKcExlihszXAncB-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A3",
+          youtube: null
+        },
+      },
+      "Jewelry Store Landing page design": {
+        subtitle: "UI/UX Case Study",
+        hero: { type: "video", src: "assets/videos/vid3.mp4" },
+        meta: {
+          Role: ["UI Engineer", "Motion Designer"],
+          "Time Frame": ["1.5 weeks"],
+          "Tools": ["Figma", "After Effects"],
+          "Focus": ["Discoverability", "Feedback timing"]
+        },
+        problem: {
+          lead: "Surface secondary actions without crowding the primary task.",
+          bullets: [
+            "Introduce progressive disclosure for advanced filters.",
+            "Provide inline error recovery with minimal disruption.",
+            "Keep touch targets ≥ 44px without sacrificing density."
+          ]
+        },
+        process: {
+          lead: "Tested 3 reveal patterns and 2 error recovery strategies.",
+          bullets: [
+            "Compared overlay vs. in-place expansion for filters.",
+            "Micro-copy iterations to reduce ambiguity in empty states.",
+            "Instrumented tap heatmaps in a small pilot."
+          ]
+        },
+        outcomes: {
+          lead: "Reduced back-and-forth navigation; fewer dead taps.",
+          bullets: [
+            "↑22% filter adoption without extra tutorial text.",
+            "↓35% error loop occurrences in retry scenarios."
+          ]
+        },
+        links: {  youtube: "https://youtu.be/aW-MewJmzgo?si=EFmhWPO1j5tHXWGM" },
+        gallery: []
+      },
+      "Restaurant App design": {
+        subtitle: "Figma design",
+        hero: { type: "video", src: "assets/videos/vid4.mp4" },
+        meta: {
+          Role: ["UX Researcher", "Designer"],
+          "Time Frame": ["2 weeks"],
+          "Tools": ["Figma", "Maze"],
+          "Focus": ["Error prevention", "Affordances", "Input speed"]
+        },
+        problem: {
+          lead: "Users frequently mis-tapped destructive actions during review.",
+          bullets: [
+            "Clarify affordances for edit vs. delete.",
+            "Provide safe-harbor states and easy reversal.",
+            "Maintain flow momentum—no heavy modals."
+          ]
+        },
+        process: {
+          lead: "Heuristic evaluation + moderated remote testing (n=8).",
+          bullets: [
+            "Added layered confirmation with swipe-to-confirm for destructive actions.",
+            "Contextual snackbars with undo; escape hatches for power users.",
+            "Reduced icon ambiguity; improved semantic color mapping."
+          ]
+        },
+        outcomes: {
+          lead: "Meaningful reduction in errors without slowing experts.",
+          bullets: [
+            "↓41% accidental destructive taps.",
+            "↑18% task completion speed for experienced users."
+          ]
+        },
+        links: { figma: "https://www.figma.com/", youtube: "https://youtu.be/cO-Qrt9dg50?si=nc_-AnL0Nm0d_vLf" },
+        gallery: []
+      },
+      "Simple To-Do list design": {
+        subtitle: "Figma design",
+        hero: { type: "video", src: "assets/videos/vid5.mp4" },
+        meta: {
+          Role: ["Product Designer"],
+          "Time Frame": ["1 week"],
+          "Tools": ["Figma"],
+          "Focus": ["Information density", "Glanceability"]
+        },
+        problem: {
+          lead: "Increase density without losing scannability.",
+          bullets: [
+            "Keep primary signals above the fold across devices.",
+            "Compress visuals while maintaining rhythm and alignment."
+          ]
+        },
+        process: {
+          lead: "Typography + layout system tuning; tokenized spacing.",
+          bullets: [
+            "Established 4-pt grid; reduced line-height subtly on large screens.",
+            "Hard-tested contrast on OLED/IPS for dark theme fidelity."
+          ]
+        },
+        outcomes: {
+          lead: "Higher information throughput in the same space.",
+          bullets: [
+            "↓19% average scroll to reach key KPI cards.",
+            "Better consistency across breakpoints."
+          ]
+        },
+        links: { figma: "https://www.figma.com/", youtube: "https://youtu.be/LAE_7XTfNx8?si=Xd73LJpa4oaKpHk8" },
+        gallery: []
+      },
+      "Beauty Landing Page design": {
+        subtitle: "Figma design",
+        hero: { type: "img", src: "assets/images/landing1.png" },
+        meta: {
+          Role: ["Product Designer"],
+          "Time Frame": ["4 days"],
+          "Tools": ["Figma"],
+          "Focus": ["First impression", "Hierarchy", "Brand tone"]
+        },
+        problem: {
+          lead: "Craft a landing that signals competence and calm confidence.",
+          bullets: [
+            "Make the hero fold answer: what, for whom, why now.",
+            "Balance aesthetic weight between illustration and copy.",
+            "Ensure the nav remains readable on parallax/gradients."
+          ]
+        },
+        process: {
+          lead: "Audited competitors → sketched hero variants → validated copy.",
+          bullets: [
+            "Explored typographic voice: weight, contrast, letter-spacing.",
+            "Color tokens tuned for vibrant accents on dark backgrounds."
+          ]
+        },
+        outcomes: {
+          lead: "A flexible hero that frames the product narrative cleanly.",
+          bullets: [
+            "CTA visibility up; clearer value phrasing.",
+            "Reusable sections for future A/B slices."
+          ]
+        },
+        links: { figma: "https://www.figma.com/", youtube: "https://youtu.be/HckdVndy3Cs?si=4_Ky-T5Q_7Ev2Sfi" },
+        gallery: []
+      },
+      // ---------- Coding ----------
+      "Prototype Showcase": { // maps to vid2 (UniPortal / University Management System)
+        subtitle: "University Portal",
+        hero: { type: "video", src: "assets/videos/vid2.mp4" },
+        meta: {
+          Role: ["Front-end Developer", "Database Designer"],
+          "Time Frame": ["4 weeks"],
+          Stack: ["React", "Vite", "Tailwind CSS", "Material UI", "Axios", "Framer Motion", "Django (DRF)", "MySQL (procs, triggers, views)", "Docker"],
+          Focus: ["Multi-role authentication & access control", "DB integrity with stored procedures", "Responsive UI with animations", "CSRF/session security"]
+        },
+        problem: {
+          lead:
+            "Develop a comprehensive student management system for university operations, integrating relational database design with secure, role-based workflows for students, professors, and administrators.",
+          bullets: [
+            "Support course registration, grade tracking, and department management with transactional integrity and prerequisite checks.",
+            "Ensure multi-user access control to prevent unauthorized actions, such as seat overbooking or invalid grade submissions.",
+            "Deliver a responsive, intuitive UI with low-latency interactions (<200ms) for enrollment and reporting tasks.",
+            "Adhere to academic constraints: no ORMs, mandatory stored procedures/functions, and 3NF/BCNF normalization."
+          ]
+        },
+        process: {
+          lead: "Collaborated on ERD design, normalized schema implementation, and full-stack integration, emphasizing security and usability.",
+          bullets: [
+            "Created ERD, normalized to 3NF, and implemented in MySQL with tables, views, constraints, triggers (e.g., grade logging), and stored procedures for queries/transactions.",
+            "Built backend with Django REST Framework: session-based auth, CSRF protection, direct SQL calls to procedures for SQL injection prevention.",
+            "Developed frontend with React atomic design (atoms/molecules/organisms/pages), Tailwind/MUI for styling, Axios for secure API calls, and Framer Motion for smooth transitions.",
+            "Implemented role-based routing and guards; features include student enrollment with seat checks, professor grade submission/validation, admin reporting (GPA views, low-enrollment queries).",
+            "Containerized via Docker for consistent dev/deployment; documented setup, challenges, and frontend-backend integration in a 30+ page report addressing all project questions."
+          ]
+        },
+        outcomes: {
+          lead: "Delivered a robust, auditable prototype meeting academic and functional requirements, with potential for real-world university deployment.",
+          bullets: [
+            "Achieved secure, concurrent operations (e.g., transactional enrollment to avoid overbooking) and automated GPA calculation via SQL views/functions.",
+            "Enhanced UX through reusable components, animations, and validation (e.g., A-F grade scale), reducing errors and improving accessibility.",
+            "Independent phase scoring ensured ERD flaws didn't impact implementation; bonus points for high-level framework (Django) and Figma UI design.",
+            "Comprehensive testing covered edge cases; report included screenshots, code snippets, and normalization steps for thorough evaluation."
+          ]
+        },
+        links: {
+          figma: null,
+          youtube: null,
+          github: "https://github.com/Keynaz-Jafari/University_Portal",
+          web: "www.universityportal.site"
+        },
+      },
+      "Digital-Walkie-Talkie": {
+        subtitle: "Embedded Systems — AVR ATmega32, C/C++, Proteus",
+        hero: { type: "video", src: "assets/videos/MicroVid.mp4" },
+        meta: {
+          Role: ["Hardware Designer"],
+          "Time Frame": ["4 weeks"],
+          Tools: ["C/C++", "AVR (ATmega32)", "Proteus", "LCD Library"],
+          Focus: ["Multi-channel USART", "Power-efficient sleep modes", "Encryption & integrity checks", "User feedback via LCD/LED"]
+        },
+        problem: {
+          lead: "Design and simulate two wireless walkie-talkie devices using AVR microcontrollers, enabling secure, channel-based communication with user-friendly interfaces.",
+          bullets: [
+            "Support multiple channels via variable baud rates (4800-115200) selected by potentiometer to ensure privacy and multi-device compatibility.",
+            "Implement message sending (Help, Over, Roger that, Stand by) with buttons, auto-standby, and status indicators under MCU constraints.",
+            "Ensure reliable transmission with sync codes, error detection (red/green LED), and power-saving sleep modes.",
+            "Bonus: Add encryption before transmission and support for additional messages/devices."
+          ]
+        },
+        process: {
+          lead: "Developed hardware-aware C code with interrupt-driven USART, ADC for channel selection, and Proteus simulation for verification.",
+          bullets: [
+            "Configured USART for dynamic baud rates; used ADC on PA3 to read potentiometer and map to channels (0-25%: 4800, etc.).",
+            "Implemented XOR encryption (key 0x5A) and checksum for data integrity; sync byte (0xAA) verifies connection before displaying messages on LCD.",
+            "Button handling (PD2/PD3/PB2/PD4 for H/O/R/W) with debouncing; mode toggle (PD5) switches Tx/Rx, power button (PD6) enables/disables.",
+            "Timer1 for auto-standby ('S' at 38400 baud every 1min); idle sleep mode after send/receive to conserve power.",
+            "LED control (PB3 red for errors/mismatch, PB4 green for success); bonus features: added 'Wilco' message and encryption/decryption."
+          ]
+        },
+        outcomes: {
+          lead: "Functional prototype with reliable communication, error handling, and bonuses, validated through Proteus simulations and detailed documentation.",
+          bullets: [
+            "Successful message exchange when channels match (green LED); red LED on baud mismatch preventing invalid displays.",
+            "Power-efficient design with sleep modes and auto-standby; extended message support improved usability.",
+            "Comprehensive report (11 pages) with code breakdowns, Proteus screenshots, and step-by-step explanations for academic evaluation.",
+            "Simulation tests confirmed no over-transmission conflicts and secure encrypted transfers."
+          ]
+        },
+        links: {
+          github: "https://github.com/Keynaz-Jafari/AVR-Walkie-Talkie",
+          figma: null,
+          youtube: null
+        },
+        gallery: []
+      },
+      "TSP Solver": {
+        subtitle: "Algorithms & Visualization (Java)",
+        hero: { type: "img", src: "assets/images/TSP.png" },
+        meta: {
+          Role: ["Algorithm Designer & Implementer"],
+          "Time Frame": ["3 weeks"],
+          Tools: ["Java", "Swing"],
+          Focus: ["Exact vs. approximation algorithms", "Heuristic optimization", "Performance analysis & visualization"]
+        },
+        problem: {
+          lead: "Develop and compare four TSP solvers.",
+          bullets: [
+            "Exact methods: Brute Force (all permutations) and DP (bitmask subsets) for small n (<20).",
+            "Approximation: Christofides for metric graphs, guaranteeing ≤1.5× optimal.",
+            "Custom heuristic: Clustering + 2-Opt to handle mid/large instances efficiently, with parallel cluster processing."
+          ]
+        },
+        process: {
+          lead: "Implemented algorithms in Java with UI for animated tours; focused on Clustering + 2-Opt.",
+          bullets: [
+            "Brute Force: Generated permutations, computed costs; O(n!) time.",
+            "DP: Built subproblem table with bitmasks; O(n² × 2ⁿ) time/space.",
+            "Christofides: MST (Kruskal's) → odd-degree matching → Eulerian circuit (Hierholzer's) → Hamiltonian; O(V² log E) time.",
+            "Clustering + 2-Opt: Divided cities into k clusters, solved each greedily with local 2-opt (edge swaps for non-crossing paths), merged tours, applied global 2-opt; parallelized clusters for speedup; O(V²) time overall."
+          ]
+        },
+        outcomes: {
+          lead: "Produced a toolset demonstrating trade-offs; Clustering + 2-Opt excelled in scalability and runtime for Euclidean TSP, suitable for real-world approximations.",
+          bullets: [
+            "Clustering + 2-Opt reduced computation time significantly vs. exact methods while yielding near-optimal tours (e.g., competitive lengths on mid-sized graphs).",
+            "Interactive UI with animations clarified algorithm steps, aiding academic presentations and analysis.",
+            "Comprehensive doc compared complexities: Brute O(n!), DP O(n²2ⁿ), Christofides O(V²logE), Clustering O(V²); highlighted heuristic's parallelism for large V."
+          ]
+        },
+        links: { github: "https://github.com/Keynaz-Jafari/TSP_problem" },
+        gallery: []
+      }
+    };
+
+    // ===== RENDERING =====
+    const params = new URLSearchParams(location.search);
+    const key = params.get('title') || "";
+    const data = projects[key];
+
+    const $title = document.getElementById('story-title');
+    const $crumb = document.getElementById('crumb-title');
+    const $subtitle = document.getElementById('story-subtitle');
+    const $hero = document.getElementById('hero-media');
+    const $meta = document.getElementById('meta');
+    const $problem = document.getElementById('problem');
+    const $process = document.getElementById('process');
+    const $outcomes = document.getElementById('outcomes');
+    const $links = document.getElementById('links');
+    const $gallery = document.getElementById('gallery');
+
+    if (!data) {
+      // Fallback: index of available stories
+      $title.textContent = "Project Stories";
+      $subtitle.textContent = "Select a case study";
+      const list = document.createElement('div'); list.className = 'meta-grid';
+      Object.keys(projects).forEach(name => {
+        const card = document.createElement('div'); card.className = 'meta-card';
+        const h4 = document.createElement('h4'); h4.textContent = name;
+        const a = document.createElement('a'); a.href = `story.html?title=${encodeURIComponent(name)}`; a.textContent = 'Open story →';
+        card.appendChild(h4); card.appendChild(a); list.appendChild(card);
+      });
+     // $hero.appendChild(imgEl('assets/images/landing1.png', 'Stories'));
+      $meta.appendChild(list);
+    } else {
+      $title.textContent = key;
+      $crumb.textContent = key;
+      $subtitle.textContent = data.subtitle || "Case study";
+
+      // Hero media
+      if (data.hero?.type === "video") {
+        $hero.appendChild(videoEl(data.hero.src));
+      } else if (data.hero?.type === "img") {
+        $hero.appendChild(imgEl(data.hero.src, key));
+      }
+
+      // Meta
+      if (data.meta) {
+        for (const [label, value] of Object.entries(data.meta)) {
+          const node = Array.isArray(value) ? listEl(value) : pEl(String(value));
+          $meta.appendChild(metaCard(label, node));
+        }
+      }
+
+      // Problem
+      if (data.problem) {
+        const h = document.createElement('h3'); h.textContent = "Problem & Context";
+        $problem.appendChild(h);
+        if (data.problem.lead) $problem.appendChild(pEl(data.problem.lead, 'lead'));
+        if (data.problem.bullets) $problem.appendChild(listEl(data.problem.bullets));
+      }
+
+      // Process
+      if (data.process) {
+        const h = document.createElement('h3'); h.textContent = "Process";
+        $process.appendChild(h);
+        if (data.process.lead) $process.appendChild(pEl(data.process.lead, 'lead'));
+        if (data.process.bullets) $process.appendChild(listEl(data.process.bullets));
+      }
+
+      // Outcomes
+      if (data.outcomes) {
+        const h = document.createElement('h3'); h.textContent = "Outcomes & Impact";
+        $outcomes.appendChild(h);
+        if (data.outcomes.lead) $outcomes.appendChild(pEl(data.outcomes.lead, 'lead'));
+        if (data.outcomes.bullets) $outcomes.appendChild(listEl(data.outcomes.bullets));
+      }
+
+      // Links
+      const linkDefs = [
+        { k:'figma', label:'Open in Figma', icon:'fa-brands fa-figma' },
+        { k:'youtube', label:'Watch on YouTube', icon:'fa-brands fa-youtube' },
+        { k:'github', label:'View on GitHub', icon:'fa-brands fa-github' },
+      ];
+      linkDefs.forEach(def => {
+        const url = data.links?.[def.k];
+        if (url) {
+          const a = document.createElement('a');
+          a.className = 'btn'; a.target = '_blank'; a.rel = 'noreferrer';
+          a.href = url; a.innerHTML = `<i class="${def.icon}"></i> ${def.label}`;
+          $links.appendChild(a);
+        }
+      });
+
+      // Gallery
+      if (data.gallery && data.gallery.length) {
+        const h = document.createElement('h3'); h.textContent = "Gallery";
+        const wrap = document.createElement('div'); wrap.className = 'gallery';
+        data.gallery.forEach(m => {
+          const frame = document.createElement('div'); frame.className = 'media-frame';
+          if (m.type === 'video') frame.appendChild(videoEl(m.src));
+          else frame.appendChild(imgEl(m.src, m.alt || ''));
+          wrap.appendChild(frame);
+        });
+        $gallery.appendChild(h); $gallery.appendChild(wrap);
+      }
+    }
+  </script>
+</body>
+</html>

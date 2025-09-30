@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Keynaz Jafari | Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===== NAV / HEADER ===== -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="#" class="logo">Keynaz<span>.</span></a>
+      <button class="nav-toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="#about"><i class="fa-regular fa-user"></i> About</a></li>
+        <li><a href="#figma"><i class="fa-brands fa-figma"></i> Designs</a></li>
+        <li><a href="#projects"><i class="fa-solid fa-code"></i> Projects</a></li>
+        <li><a href="#contact"><i class="fa-regular fa-envelope"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== HERO (with image) ===== -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1 class="display"><span class="accent">Keynaz Jafari</span></h1>
+        <p class="subtitle">Computer Engineering @ Shiraz University • Front-End Developer • Aspiring HCI/UX Researcher</p>
+        <div class="hero-actions">
+          <a href="#figma" class="btn btn-primary">View Designs</a>
+          <a href="#projects" class="btn btn-ghost">Explore Projects</a>
+        </div>
+        <ul class="hero-meta">
+          <li><i class="fa-regular fa-envelope"></i> <a href="mailto:jafari.keinaz@gmail.com">jafari.keinaz@gmail.com</a></li>
+          <li><i class="fa-brands fa-github"></i> <a href="https://github.com/keinaz" target="_blank" rel="noreferrer">github.com/keinaz</a></li>
+          <li><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/keynaz-jafari-3b16b7245" target="_blank" rel="noreferrer">linkedin.com/in/keynaz-jafari</a></li>
+        </ul>
+      </div>
+
+      <div class="hero-image">
+        <img src="./F3073D25-4643-4926-ACCE-61DC2A2F2B0F.JPG" alt="Portrait of Keynaz Jafari" loading="eager" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT (aligns to container like header) ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p>
+        I’m a Computer Engineering undergraduate at Shiraz University, passionate about blending software engineering with user-centered design. I work across full-stack web (React, Django), embedded systems (AVR/Arduino), and UI/UX prototyping (Figma, Rive), turning complex ideas into scalable, intuitive experiences.
+      </p>
+      <p>
+        Beyond coursework, I’ve taught programming, mentored peers in a UI/UX lab, and contributed to IEEE events through technical work and creative storytelling (film & photography). My HCI interests focus on usable, inclusive systems that help people achieve more with clarity and delight.
+      </p>
+      <div class="chips">
+        <span>React</span><span>Django</span><span>Figma</span><span>Python</span><span>Java</span><span>UI/UX</span><span>Accessibility</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== UI/UX DESIGNS (FIGMA) ===== -->
+  <section id="figma" class="section">
+    <div class="container">
+      <h2 class="section-title">UI/UX Designs</h2>
+
+      <!-- vid1 -->
+      <article class="full-card">
+        <div class="media-frame ar-169">
+          <video class="autoplay-video" autoplay muted loop playsinline preload="metadata"
+                 src="assets/videos/vid1.mp4"></video>
+        </div>
+        <div class="card-body">
+          <h3>Genetic counseling center (in persian)</h3>
+          <p>A short preview is shown here. To visit the whole prototype, click open in Figma button below.</p>
+          <div class="card-actions">
+            <a class="btn btn-primary" target="_blank" rel="noreferrer" href="https://www.figma.com/proto/Il0bOeYylAQ0CDrE13mPb8/Project?page-id=0%3A1&node-id=381-835&viewport=221%2C287%2C0.38&t=TeKcExlihszXAncB-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A3">Open in Figma</a>
+            <a class="btn btn-ghost" href="story.html?title=Flow%20Prototype%20I">Case Study Story</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- vid5 (with YouTube button) -->
+      <article class="full-card">
+        <div class="media-frame ar-169">
+          <video class="autoplay-video" autoplay muted loop playsinline preload="metadata"
+                 src="assets/videos/vid5.mp4"></video>
+        </div>
+        <div class="card-body">
+          <h3>Flow Prototype V</h3>
+          <p>Finalized flows emphasizing glanceable information density and rhythm.</p>
+          <div class="card-actions">
+          
+            <a class="btn btn-ghost" target="_blank" rel="noreferrer" href="https://youtu.be/aW-MewJmzgo?si=Ww3HOmorMyfb8Bwj">Watch on YouTube</a>
+            
+          </div>
+        </div>
+      </article>
+
+      <!-- vid3 (with YouTube button) -->
+      <article class="full-card">
+        <div class="media-frame ar-169">
+          <video class="autoplay-video" autoplay muted loop playsinline preload="metadata"
+                 src="assets/videos/vid3.mp4"></video>
+        </div>
+        <div class="card-body">
+          <h3>Flow Prototype III</h3>
+          <p>Interaction study exploring hierarchy, timing, and subtle motion cues.</p>
+          <div class="card-actions">
+           
+            <a class="btn btn-ghost" href="https://youtu.be/cO-Qrt9dg50?si=DIHO__e0kMg06NLB" target="_blank" rel="noreferrer">Watch on YouTube</a>
+           
+          </div>
+        </div>
+      </article>
+
+      <!-- vid4 (with YouTube button) -->
+      <article class="full-card">
+        <div class="media-frame ar-169">
+          <video class="autoplay-video" autoplay muted loop playsinline preload="metadata"
+                 src="assets/videos/vid4.mp4"></video>
+        </div>
+        <div class="card-body">
+          <h3>Flow Prototype IV</h3>
+          <p>Patterns for discoverability and error recovery, refined across iterations.</p>
+          <div class="card-actions">
+    
+            <a class="btn btn-ghost" target="_blank" rel="noreferrer" href="https://youtu.be/LAE_7XTfNx8?si=7nhLrmRpXpmiFRaK">Watch on YouTube</a>
+
+          </div>
+        </div>
+      </article>
+
+      <!-- Landing static image -->
+      <article class="full-card">
+        <div class="media-frame ar-169">
+          <!-- crop to laptop area: adjust via object-position in CSS if needed -->
+          <img class="fit-cover pos-top" src="assets/images/landing1.png" alt="Landing design" loading="lazy" decoding="async" />
+        </div>
+        <div class="card-body">
+          <h3>Landing Experience</h3>
+          <p>Landing page concept focused on contrast, rhythm, and first-impression clarity.</p>
+          <div class="card-actions">
+            <a class="btn btn-ghost" target="_blank" rel="noreferrer" href="https://youtu.be/HckdVndy3Cs?si=Zt2x2vtLT7bIdDfP">Watch on YouTube</a>
+
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+<!-- ===== CODING PROJECTS ===== -->
+<section id="projects" class="section">
+  <div class="container">
+    <h2 class="section-title">Coding Projects</h2>
+
+    <!-- vid2 -->
+    <article class="full-card">
+      <div class="media-frame ar-169">
+        <video class="autoplay-video" autoplay muted loop playsinline preload="metadata"
+               src="assets/videos/vid2.mp4"></video>
+      </div>
+      <div class="card-body">
+        <h3>Prototype Showcase</h3>
+        <p>End-to-end flow recorded from the working prototype (silent, looped).</p>
+        <div class="card-actions">
+          <a class="btn btn-primary" href="story.html?title=Prototype%20Showcase">Read more</a>
+          <a class="btn btn-ghost" href="http://universityportal.site">Open Website</a>
+         
+        </div>
+      </div>
+    </article>
+
+    <!-- MicroVid -->
+    <article class="full-card">
+      <div class="media-frame ar-169">
+        <video class="autoplay-video" autoplay muted loop playsinline preload="metadata"
+               src="assets/videos/MicroVid.mp4"></video>
+      </div>
+      <div class="card-body">
+        <h3>Walkie-Talkie Demo</h3>
+        <p>Embedded system demo showcasing USART communication and LED feedback (silent, looped).</p>
+        <div class="card-actions">
+          <a class="btn btn-ghost" href="story.html?title=Digital-Walkie-Talkie">Read more</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- TSP image -->
+    <article class="full-card">
+      <div class="media-frame ar-169">
+        <img class="fit-contain" src="assets/images/TSP.png" alt="TSP solver visualization" loading="lazy" />
+      </div>
+      <div class="card-body">
+        <h3>TSP Solver (Java + Swing)</h3>
+        <p>Brute Force, DP, Christofides, plus custom clustering + 2-opt heuristic with animated routes.</p>
+        <div class="card-actions">
+          <a class="btn btn-ghost" href="story.html?title=TSP%20Solver">Read more</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="muted">Open to research collaborations, RA/TA roles, and HCI/SE projects.</p>
+      <ul class="contact-list">
+        <li><i class="fa-regular fa-envelope"></i> <a href="mailto:jafari.keinaz@gmail.com">jafari.keinaz@gmail.com</a></li>
+        <li><i class="fa-brands fa-github"></i> <a href="https://github.com/keinaz" target="_blank" rel="noreferrer">github.com/keinaz</a></li>
+        <li><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/keynaz-jafari-3b16b7245" target="_blank" rel="noreferrer">linkedin.com/in/keynaz-jafari</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container foot">
+      <span>&copy; 2025 Keynaz Jafari</span>
+      <span class="dot">•</span>
+      <span>Built with care.</span>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('.nav-menu');
+    if (toggle && menu) {
+      toggle.addEventListener('click', ()=> menu.classList.toggle('show'));
+      document.querySelectorAll('.nav-menu a').forEach(a => a.addEventListener('click', ()=> menu.classList.remove('show')));
+    }
+
+    // Force autoplay (in case a browser delays it)
+    document.addEventListener('DOMContentLoaded', () => {
+      const vids = document.querySelectorAll('.autoplay-video');
+      vids.forEach(v => {
+        v.muted = true; v.loop = true; v.playsInline = true;
+        v.setAttribute('playsinline',''); v.setAttribute('muted',''); v.setAttribute('loop','');
+        v.removeAttribute('controls');
+        const tryPlay = () => v.play().catch(()=> setTimeout(tryPlay, 200));
+        tryPlay();
+      });
+    });
+  </script>
+</body>
+</html>
